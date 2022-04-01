@@ -4,10 +4,16 @@
 		http://www.springframework.org/schema/beans 
 		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
-    <bean id="gestionMaterielService" class="com.ensa.gi4.service.impl.GestionMaterielServiceImpl"/>
+    <bean id="gestionMaterielService" class="com.ensa.gi4.service.impl.GestionMaterielServiceImpl">
+        <property name="materielDao" ref="materielDao" />
+
+    </bean>
+
+    <bean id="materielDao" class ="com.ensa.gi4.datatabase.MaterielDao" factory-method="getInstance"/>
 
     <bean id="gestionMaterielController" class="com.ensa.gi4.controller.GestionMaterielController">
-        <property name="gestionMaterielService" ref="gestionMaterielService"/>
+        <property name="gestionMaterielService" ref="gestionMaterielService" />
+
     </bean>
 
 

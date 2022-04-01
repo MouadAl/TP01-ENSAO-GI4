@@ -7,5 +7,6 @@ public interface GestionMaterielService {
     void listerMateriel();
     void ajouterNouveauMateriel(Materiel materiel);
     void modifierMateriel(String oldMaterielName,Materiel materiel);
+    void removeMateriel(String materielName);
 
 }

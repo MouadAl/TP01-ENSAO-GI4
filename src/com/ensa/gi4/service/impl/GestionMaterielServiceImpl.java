@@ -3,14 +3,16 @@ package com.ensa.gi4.service.impl;
 import com.ensa.gi4.datatabase.MaterielDao;
 import com.ensa.gi4.modele.Materiel;
 import com.ensa.gi4.service.api.GestionMaterielService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
-
+@Component("gestionMaterielService")
 public class GestionMaterielServiceImpl implements GestionMaterielService {
     //private MaterielDao dao = MaterielDao.getInstance();
     private MaterielDao dao;
 
-
+    @Autowired
     public void setMaterielDao(MaterielDao materielDao) {
         // injection par accesseur
         this.dao = materielDao;

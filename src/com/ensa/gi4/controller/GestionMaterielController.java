@@ -3,9 +3,10 @@ package com.ensa.gi4.controller;
 import com.ensa.gi4.modele.Livre;
 import com.ensa.gi4.modele.Materiel;
 import com.ensa.gi4.service.api.GestionMaterielService;
+import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
-
+@Component("controller")
 public class GestionMaterielController {
 
     private GestionMaterielService gestionMaterielService;

@@ -10,13 +10,15 @@ import java.util.List;
 @Component("gestionMaterielService")
 public class GestionMaterielServiceImpl implements GestionMaterielService {
     //private MaterielDao dao = MaterielDao.getInstance();
+    //Injection par annotation
+    @Autowired
     private MaterielDao dao;
 
-    @Autowired
-    public void setMaterielDao(MaterielDao materielDao) {
+//Injection par XML
+  /*  public void setMaterielDao(MaterielDao materielDao) {
         // injection par accesseur
         this.dao = materielDao;
-    }
+    }*/
 
     @Override
     public void init() {

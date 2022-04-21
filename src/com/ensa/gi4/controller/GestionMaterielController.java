@@ -3,12 +3,14 @@ package com.ensa.gi4.controller;
 import com.ensa.gi4.modele.Livre;
 import com.ensa.gi4.modele.Materiel;
 import com.ensa.gi4.service.api.GestionMaterielService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
 @Component("controller")
 public class GestionMaterielController {
-
+    //Injection par rannotation
+    @Autowired
     private GestionMaterielService gestionMaterielService;
 
     public void listerMateriel() {
@@ -66,9 +68,12 @@ public class GestionMaterielController {
     private void sortirDeLApplication() {
         System.exit(0);
     }
-
+    //Injection par XML
+    /*
     public void setGestionMaterielService(GestionMaterielService gestionMaterielService) {
         // injection par accesseur
         this.gestionMaterielService = gestionMaterielService;
     }
+    */
+
 }
